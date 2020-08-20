@@ -2,6 +2,7 @@ Altcode and Unicode library for Ardunio (Pro) Micro and Ardunio Leonardo Keyboar
 
 Created by Maciej Zajaczkowski，Copyright 2020 ©. Free free to use this library even for commercial purposes, but please attribute me.
 
+To include library: #include <Altcode_Unicode_lib.h>
 
 Warnings and prerequisites:
 
