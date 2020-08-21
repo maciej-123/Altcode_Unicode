@@ -1,6 +1,7 @@
 Altcode and Unicode library for Ardunio (Pro) Micro and Ardunio Leonardo Keyboard Emulation.
 
 Created by Maciej Zajaczkowski，Copyright 2020 ©. Free free to use this library even for commercial purposes, but please attribute me.
+License: Creative Commons Attribution 4.0
 
 To include library: #include <Altcode_Unicode_lib.h>
 
