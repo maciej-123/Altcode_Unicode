@@ -11,50 +11,104 @@ void Unicode_Alt_X(String code)
 
 void Unicode_Alt_Plus(String code)
 {
+   //check num lock - if OFF then switch ON
+   if (BootKeyboard.getLeds() & LED_NUM_LOCK)
+   {
+     Keyboard.press(KEY_NUM_LOCK);
+     Keyboard.releaseAll();
+   }
+  
   Keyboard.press(KEY_LEFT_ALT);
-  Keyboard.press(223);
+  Keyboard.press(HID_KEYPAD_ADD);
   Keyboard.press(KEY_BACKSPACE);
   delay(10);
   Keyboard.releaseAll();
   Keyboard.print(code);  
   Keyboard.press(KEY_RETURN);
-  Keyboard.releaseAll();
+  
   delay(100);
+  Keyboard.releaseAll();
 }
 
 
 void alt_code(int num1, int num2, int num3, int num4)
 {
-
-  if (num1 == 0){num1+=10;}
-  if (num2 == 0){num2+=10;}
-  if (num3 == 0){num3+=10;}
-  if (num4 == 0){num4+=10;}
-    
-  //add 0xE0
-  num1 += 224;
-  num2 += 224;
-  num3 += 224;
-  num4 += 224;
-
-  Serial.println(num1);
-  Serial.println(num2);
-  Serial.println(num3);
-  Serial.println(num4);
+   //switch on num lock
+   if (BootKeyboard.getLeds() & LED_NUM_LOCK)
+   {
+     Keyboard.press(KEY_NUM_LOCK);
+     Keyboard.releaseAll();
+   }
 
   Keyboard.press(KEY_LEFT_ALT);
-  Keyboard.press(num1); 
-  delay(50); 
-  Keyboard.release(num1);      
-  Keyboard.press(num2); 
-  delay(50); 
-  Keyboard.release(num2); 
-  Keyboard.press(num3); 
-  delay(50); 
-  Keyboard.release(num3); 
-  Keyboard.press(num4); 
-  delay(50); 
-  Keyboard.release(num4);
+  Keypad_press(num1);
+  Keypad_press(num2);
+  Keypad_press(num3);
+  Keypad_press(num4);
   Keyboard.releaseAll();
   delay(100);
+}
+
+void Keypad_press(int num)
+{
+  if(num == 0)
+  { 
+  Keyboard.press(KEYPAD_0); 
+  Keyboard.release(KEYPAD_0); 
+  delay(50); 
+  }
+  else if(num == 1)
+  {
+  Keyboard.press(KEYPAD_1); 
+  Keyboard.release(KEYPAD_1); 
+  delay(50); 
+  }
+  else if(num == 2)
+  {
+  Keyboard.press(KEYPAD_2); 
+  Keyboard.release(KEYPAD_2); 
+  delay(50); 
+  }
+  else if(num == 3)
+  {
+  Keyboard.press(KEYPAD_3); 
+  Keyboard.release(KEYPAD_3); 
+  delay(50); 
+  }
+  else if(num == 4)
+  {
+  Keyboard.press(KEYPAD_4); 
+  Keyboard.release(KEYPAD_4); 
+  delay(50); 
+  }
+  else if(num == 5)
+  {
+  Keyboard.press(KEYPAD_5); 
+  Keyboard.release(KEYPAD_5); 
+  delay(50); 
+  }
+  else if(num == 6)
+  {
+  Keyboard.press(KEYPAD_6); 
+  Keyboard.release(KEYPAD_6); 
+  delay(50); 
+  }
+  else if(num == 7)
+  {
+  Keyboard.press(KEYPAD_7); 
+  Keyboard.release(KEYPAD_7); 
+  delay(50); 
+  }
+  else if(num == 8)
+  {
+  Keyboard.press(KEYPAD_8); 
+  Keyboard.release(KEYPAD_8); 
+  delay(50); 
+  }
+  else if(num == 9)
+  {
+  Keyboard.press(KEYPAD_9); 
+  Keyboard.release(KEYPAD_9); 
+  delay(50); 
+  }  
 }
