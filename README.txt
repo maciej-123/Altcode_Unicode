@@ -10,16 +10,15 @@ Warnings and prerequisites:
 -This library will only work on Ardunio (Pro) Micro and Arduino Leonardo boards as it makes us of the "Keyboard.h" 
 library to automatically emulate keystrokes.
 
-SUMMARY WARNINGS: check numlock, check windows language, download unicode input
+SUMMARY WARNINGS: check windows language, download unicode input
 
 -The library contains 3 functions:
 	-Altcode 
 	-Unicode_Alt_X
 	-Unicode_Alt_Plus (MUST HAVE: unicodeinput.exe) https://www.fileformat.info/tool/unicodeinput/
 
--The altcode function take 4 integers and executes an altcode macro. For this to work properly, please ensure that 
-NUMLOCK is set to the correct position such that numbers can be inputted via the number keypad. Also alt codes may 
-not work on some apps and may cause UNPREDICABLE BEHAVIOUR. For codes of less than 4 digits, insert -1 for blank digit.
+-The altcode function take 4 integers and executes an altcode macro. Alt codes may not work on some apps and may cause 
+UNPREDICABLE BEHAVIOUR. For codes of less than 4 digits, insert -1 for blank digit.
 
 - The Unicode_Alt_X function takes in a string of up to 4 hexadecimal digits (0-9 and a-f) (5 digits may work by not always) 
 and executes a macro to print unicode characters via the Alt-X command. This does NOT work in ALL applications, ie chrome. 
