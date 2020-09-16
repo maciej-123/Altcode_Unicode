@@ -8,7 +8,7 @@ To include library: #include <Altcode_Unicode_lib.h>
 Warnings and prerequisites:
 
 -This library will only work on Ardunio (Pro) Micro and Arduino Leonardo boards as it makes us of the "Keyboard.h" 
-library to automatically emulate keystrokes.
+library to automatically emulate keystrokes. The functions automatically set numlock to the correct position.
 
 SUMMARY WARNINGS: check windows language, download unicode input
 
