@@ -1,10 +1,9 @@
 //alt code_unicode tester - Maciej Zajaczkowski, copyright 2020 ©
 
-//WARNING: please ensure that unicodeinput.exe is open. Functions automatically set numlock position.
+//WARNING: please ensure that unicodeinput.exe is open. Functions automatically set numlock to correct position.
 //otherwise may behave unpredictably. Also lease note that UNICODE Alt+X only takes up to 4 digit hex codes and
 //only works in some applications such as Microsoft Word and not google chrome.
 
-#include "Keyboard.h"
 #include <Altcode_Unicode_lib.h>
 
 const int pinLed = LED_BUILTIN;
